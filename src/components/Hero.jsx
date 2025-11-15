@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';
-
+import heroBg from '../assets/images/hero-bg.png';
 
 
 export default function Hero() {
@@ -12,10 +12,13 @@ export default function Hero() {
   };
 
   return (
-    <section
-      className="relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white px-4"
-      style={{ backgroundImage: "url('/images/hero-bg.png')" }}
-    >
+
+
+<section
+  className="relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white px-4"
+  style={{ backgroundImage: `url(${heroBg})` }}
+>
+
       {/* Partículas animadas */}
       <Particles
         id="tsparticles"

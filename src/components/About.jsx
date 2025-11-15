@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import aboutIcon from '../assets/images/about-icon.png'; 
 
 export default function About() {
   return (
@@ -35,7 +35,7 @@ export default function About() {
           className="flex justify-center"
         >
           <img
-            src="/images/about-icon.png"
+            src={aboutIcon} // ✅ usa a importação
             alt="Ícone representando tecnologia"
             className="w-64 h-64"
           />
