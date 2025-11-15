@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Trixon/static/css/main.cc665bc6.css",
+    "main.js": "/Trixon/static/js/main.ec99010a.js",
+    "static/js/453.253462eb.chunk.js": "/Trixon/static/js/453.253462eb.chunk.js",
+    "static/media/hero-bg.png": "/Trixon/static/media/hero-bg.163a632be1a9ac6f9d69.png",
+    "static/media/about-icon.png": "/Trixon/static/media/about-icon.ca76a40e30c4647d5364.png",
+    "index.html": "/Trixon/index.html",
+    "main.cc665bc6.css.map": "/Trixon/static/css/main.cc665bc6.css.map",
+    "main.ec99010a.js.map": "/Trixon/static/js/main.ec99010a.js.map",
+    "453.253462eb.chunk.js.map": "/Trixon/static/js/453.253462eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc665bc6.css",
+    "static/js/main.ec99010a.js"
+  ]
+}
