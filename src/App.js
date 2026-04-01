@@ -1,4 +1,4 @@
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
@@ -8,11 +8,11 @@ import CTA from './components/CTA';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import './index.css'; // Certifique-se de que o Tailwind está importado
-import Navbar from './components/Navbar';
+
 function App() {
   return (
     <>
-      <Header />
+      
       <Navbar/>
       <Hero />
       <Services />

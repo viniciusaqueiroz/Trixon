@@ -5,7 +5,7 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-2">Contato</h4>
           <p>Email: contato@trixon.com.br</p>
-          <p>Telefone: (00) 00000-0000</p>
+          <p>Telefone: (32) 98875-7881</p>
         </div>
         <div>
           <h4 className="font-bold mb-2">Links rápidos</h4>

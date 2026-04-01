@@ -8,7 +8,7 @@ export default function Services() {
           Nossos Serviços
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="bg-primary text-white p-6 rounded-lg shadow-lg text-center hover:scale-105 hover:bg-blue-800 transition duration-100 transition-colors">
+          <div className="utilities bg-primary text-white p-6 rounded-lg shadow-lg text-center hover:scale-105 hover:bg-blue-800 transition duration-100 transition-colors">
             <FaServer size={40} className="mx-auto mb-4" />
             <h3 className="text-xl font-bold mb-2">Infraestrutura</h3>
             <p>Servidores, redes e conectividade com alta performance e escalabilidade.</p>
