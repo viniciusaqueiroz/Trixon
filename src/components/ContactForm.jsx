@@ -35,6 +35,7 @@ export default function ContactForm() {
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         {/* Formulário */}
+        
         <form
           onSubmit={handleSubmit}
           className="bg-white p-8 rounded-xl shadow-lg space-y-5"
