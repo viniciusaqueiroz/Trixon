@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Trixon
+
+Landing page institucional em React para a Trixon.
+
+## Documentacao do projeto
+
+- [Mapa tecnico e guia de manutencao](docs/PROJECT_MAP.md)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

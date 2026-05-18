@@ -10,19 +10,47 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-2">Links rápidos</h4>
           <ul className="space-y-1">
-            <li><a href="#servicos" className="hover:underline">Serviços</a></li>
-            <li><a href="#sobre" className="hover:underline">Sobre</a></li>
-            <li><a href="#beneficios" className="hover:underline">Benefícios</a></li>
-            <li><a href="#depoimentos" className="hover:underline">Depoimentos</a></li>
+            <li>
+              <a
+                href="#servicos"
+                className="transition-colors duration-500 ease-out hover:text-blue-200 hover:underline"
+              >
+                Serviços
+              </a>
+            </li>
+            <li>
+              <a
+                href="#sobre"
+                className="transition-colors duration-500 ease-out hover:text-blue-200 hover:underline"
+              >
+                Sobre
+              </a>
+            </li>
+            <li>
+              <a
+                href="#beneficios"
+                className="transition-colors duration-500 ease-out hover:text-blue-200 hover:underline"
+              >
+                Benefícios
+              </a>
+            </li>
+            <li>
+              <a
+                href="#depoimentos"
+                className="transition-colors duration-500 ease-out hover:text-blue-200 hover:underline"
+              >
+                Depoimentos
+              </a>
+            </li>
           </ul>
         </div>
         <div>
           <h4 className="font-bold mb-2">Créditos</h4>
-          <p>© {new Date().getFullYear()} <span className="font-orbitron">Trixon</span> Todos os direitos reservados.</p>
-          
+          <p>
+            © {new Date().getFullYear()} <span className="font-orbitron">Trixon</span> Todos os direitos reservados.
+          </p>
         </div>
       </div>
-      
     </footer>
   );
 }

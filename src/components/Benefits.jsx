@@ -45,7 +45,7 @@ export default function Benefits() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition duration-300"
+                className="bg-white p-6 rounded-xl shadow-md text-center transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-xl"
               >
                 <Icon className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h4 className="text-lg font-semibold mb-2 text-primary">{benefit.title}</h4>

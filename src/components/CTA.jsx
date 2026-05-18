@@ -28,7 +28,7 @@ export default function CTA() {
           <div className="mt-6 flex flex-col sm:flex-row gap-4">
             <a
               href="#contato"
-              className="bg-white text-primary font-semibold px-6 py-3 rounded hover:bg-gray-200 transition duration-300"
+              className="bg-white text-primary font-semibold px-6 py-3 rounded transition-all duration-500 ease-out hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-lg"
             >
               Solicitar orçamento
             </a>
@@ -36,7 +36,7 @@ export default function CTA() {
               href="https://wa.me/5532988757881?text=Olá!%20Gostaria%20de%20falar%20com%20um%20consultor%20da%20Trixon."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 text-white font-semibold px-6 py-3 rounded hover:bg-green-600 transition duration-300"
+              className="bg-green-500 text-white font-semibold px-6 py-3 rounded transition-all duration-500 ease-out hover:-translate-y-0.5 hover:bg-green-600 hover:shadow-lg"
             >
               Falar no WhatsApp
             </a>

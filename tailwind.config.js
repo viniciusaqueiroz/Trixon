@@ -6,7 +6,11 @@ module.exports = {
         primary: '#1e3a8a', // azul escuro
         secondary: '#64748b',
         accent: '#ffffff',
-        
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        display: ['Space Grotesk', 'sans-serif'],
+        orbitron: ['Orbitron', 'sans-serif'],
       },
     },
     
@@ -14,4 +18,3 @@ module.exports = {
   
   plugins: [],
 }
-

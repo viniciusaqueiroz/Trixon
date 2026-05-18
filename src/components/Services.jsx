@@ -8,22 +8,22 @@ export default function Services() {
           Nossos Serviços
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="utilities bg-primary text-white p-6 rounded-lg shadow-lg text-center hover:scale-105 hover:bg-blue-800 transition duration-100 transition-colors">
+          <div className="utilities bg-primary text-white p-6 rounded-lg shadow-lg text-center transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:bg-blue-700 hover:shadow-xl">
             <FaServer size={40} className="mx-auto mb-4" />
             <h3 className="text-xl font-bold mb-2">Infraestrutura</h3>
             <p>Servidores, redes e conectividade com alta performance e escalabilidade.</p>
           </div>
-          <div className="bg-primary text-white p-6 rounded-lg shadow-lg text-center hover:scale-105 hover:bg-blue-800 transition duration-100 transition-colors">
+          <div className="bg-primary text-white p-6 rounded-lg shadow-lg text-center transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:bg-blue-700 hover:shadow-xl">
             <FaShieldAlt size={40} className="mx-auto mb-4" />
             <h3 className="text-xl font-bold mb-2">Segurança</h3>
             <p>Proteção de dados, firewalls, backups e prevenção de ataques cibernéticos.</p>
           </div>
-          <div className="bg-primary text-white p-6 rounded-lg shadow-lg text-center hover:scale-105 hover:bg-blue-800 transition duration-100 transition-colors">
+          <div className="bg-primary text-white p-6 rounded-lg shadow-lg text-center transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:bg-blue-700 hover:shadow-xl">
             <FaHeadset size={40} className="mx-auto mb-4" />
             <h3 className="text-xl font-bold mb-2">Suporte</h3>
             <p>Atendimento remoto ágil, monitoramento e manutenção preventiva.</p>
           </div>
-          <div className="bg-primary text-white p-6 rounded-lg shadow-lg text-center hover:scale-105 hover:bg-blue-800 transition duration-100 transition-colors">
+          <div className="bg-primary text-white p-6 rounded-lg shadow-lg text-center transition-all duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:bg-blue-700 hover:shadow-xl">
             <FaLaptopCode size={40} className="mx-auto mb-4" />
             <h3 className="text-xl font-bold mb-2">Consultoria de TI</h3>
             <p>Planejamento estratégico, diagnóstico técnico e soluções sob medida para sua empresa.</p>

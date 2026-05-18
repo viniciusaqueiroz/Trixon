@@ -74,12 +74,12 @@ export default function Navbar() {
         <a 
           href="#" 
           onClick={(e) => handleScroll(e, '#')}
-          className="cursor-pointer hover:opacity-80 transition-opacity"
+          className="cursor-pointer transition-opacity duration-500 ease-out hover:opacity-80"
         >
           <h1 className="text-2xl md:text-4xl font-orbitron font-extrabold tracking-tight 
                          bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 
                          bg-clip-text text-transparent animate-gradient">
-            Trixon
+            TRIXON
           </h1>
         </a>
 
@@ -90,7 +90,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
-              className="text-gray-700 hover:text-primary font-medium transition-colors duration-300"
+              className="text-gray-700 font-medium transition-colors duration-500 ease-out hover:text-primary"
             >
               {link.label}
             </a>
@@ -98,7 +98,7 @@ export default function Navbar() {
           <a
             href="#cta"
             onClick={(e) => handleScroll(e, '#cta')}
-            className="bg-primary text-white px-4 py-2 rounded hover:bg-blue-800 transition duration-300"
+            className="bg-primary text-white px-4 py-2 rounded transition-all duration-500 ease-out hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg"
           >
             Solicitar orçamento
           </a>
@@ -118,7 +118,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
-              className="block text-gray-700 hover:text-primary font-medium"
+              className="block text-gray-700 font-medium transition-colors duration-500 ease-out hover:text-primary"
             >
               {link.label}
             </a>
@@ -126,7 +126,7 @@ export default function Navbar() {
           <a
             href="#cta"
             onClick={(e) => handleScroll(e, '#cta')}
-            className="block bg-primary text-white px-4 py-2 rounded text-center hover:bg-blue-800 transition duration-300"
+            className="block bg-primary text-white px-4 py-2 rounded text-center transition-all duration-500 ease-out hover:bg-blue-700 hover:shadow-lg"
           >
             Solicitar orçamento
           </a>

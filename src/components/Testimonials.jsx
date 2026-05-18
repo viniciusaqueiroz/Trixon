@@ -74,7 +74,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition duration-300 h-full flex flex-col justify-between"
+              className="bg-white p-6 rounded-xl shadow-md text-center transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-xl h-full flex flex-col justify-between"
             >
               <p className="text-gray-700 italic mb-4">“{t.text}”</p>
 

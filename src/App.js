@@ -7,7 +7,7 @@ import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import './index.css'; // Certifique-se de que o Tailwind está importado
+import './index.css'; 
 
 function App() {
   return (
