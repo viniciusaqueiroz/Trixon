@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Trixon/static/css/main.8ba97c95.css",
-    "main.js": "/Trixon/static/js/main.11195f4c.js",
+    "main.css": "/Trixon/static/css/main.ccc5ec99.css",
+    "main.js": "/Trixon/static/js/main.4760949f.js",
     "static/js/317.10b01ca2.chunk.js": "/Trixon/static/js/317.10b01ca2.chunk.js",
     "static/media/hero-bg.png": "/Trixon/static/media/hero-bg.163a632be1a9ac6f9d69.png",
     "static/media/about-icon.png": "/Trixon/static/media/about-icon.ca76a40e30c4647d5364.png",
     "index.html": "/Trixon/index.html",
-    "main.8ba97c95.css.map": "/Trixon/static/css/main.8ba97c95.css.map",
-    "main.11195f4c.js.map": "/Trixon/static/js/main.11195f4c.js.map",
+    "main.ccc5ec99.css.map": "/Trixon/static/css/main.ccc5ec99.css.map",
+    "main.4760949f.js.map": "/Trixon/static/js/main.4760949f.js.map",
     "317.10b01ca2.chunk.js.map": "/Trixon/static/js/317.10b01ca2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ba97c95.css",
-    "static/js/main.11195f4c.js"
+    "static/css/main.ccc5ec99.css",
+    "static/js/main.4760949f.js"
   ]
 }
