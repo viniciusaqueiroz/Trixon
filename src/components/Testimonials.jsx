@@ -50,7 +50,7 @@ export default function Testimonials() {
       id="depoimentos"
       className="py-20 bg-gradient-to-r from-gray-100 via-blue-50 to-gray-50 px-4"
     >
-      <h3 className="text-3xl font-bold text-primary text-center mb-12">Depoimentos</h3>
+      <h3 className="text-3xl font-heading font-bold text-primary text-center mb-12">Depoimentos</h3>
 
       <Swiper
         modules={[Autoplay, Pagination]}

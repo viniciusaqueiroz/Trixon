@@ -8,8 +8,9 @@ module.exports = {
         accent: '#ffffff',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Space Grotesk', 'sans-serif'],
+        sans: ['Manrope', 'sans-serif'],
+        heading: ['Sora', 'sans-serif'],
+        display: ['Sora', 'sans-serif'],
         orbitron: ['Orbitron', 'sans-serif'],
       },
     },

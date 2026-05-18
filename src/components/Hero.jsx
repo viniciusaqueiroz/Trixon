@@ -95,7 +95,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl md:text-2xl font-display font-semibold text-gray-100 mb-4"
+          className="text-xl md:text-2xl font-body font-medium text-gray-100 mb-4"
         >
           Soluções Inteligentes em Tecnologia
         </motion.h2>
