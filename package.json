@@ -2,7 +2,6 @@
   "name": "consultor-ti-landing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://viniciusaqueiroz.github.io/Trixon",
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "framer-motion": "^12.43.0",
