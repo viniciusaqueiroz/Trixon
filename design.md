@@ -208,7 +208,7 @@ Usar escala de 4/8px. Qualquer mudanca na altura do Navbar exige revisar o offse
 - Nao aplicar em Navbar, menus, botoes, formularios, paragrafo, Footer ou titulos internos de cards.
 - Deve preservar a tipografia, cor, alinhamento, tamanho e espacamento do heading hospedeiro.
 - Parametros atuais: animationDuration 1, ease back.inOut(2), scrollStart center bottom+=50%, scrollEnd bottom bottom-=40% e stagger 0.03.
-- Usa GSAP/ScrollTrigger com scrub suavizado de 3s e cleanup no desmontar do componente, para manter a progressao perceptivel em scrolls rapidos. No Hero, playOnMount inicia uma entrada curta de 0.65s com stagger 0.02 e usa toggleActions para reverter ao sair e executar novamente ao retornar.
+- Usa GSAP/ScrollTrigger com scrub suavizado de 3s e cleanup no desmontar do componente, para manter a progressao perceptivel em scrolls rapidos. No Hero, playOnMount inicia uma entrada curta de 0.65s com stagger 0.02; a janela top 85% -> bottom 15% e toggleActions fazem cada texto reverter ao sair e executar novamente ao retornar.
 - Com reduced motion, as letras devem permanecer imediatamente visiveis e estaticas.
 
 ### CTA

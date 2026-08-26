@@ -93,6 +93,8 @@ export default function Hero() {
             containerClassName="text-5xl md:text-7xl font-orbitron font-extrabold mb-3"
             animationDuration={0.65}
             stagger={0.02}
+            scrollStart="top 85%"
+            scrollEnd="bottom 15%"
             playOnMount
           >
             TRIXON
@@ -109,6 +111,8 @@ export default function Hero() {
             containerClassName="text-xl md:text-2xl font-body font-medium text-gray-100 mb-4"
             animationDuration={0.65}
             stagger={0.02}
+            scrollStart="top 85%"
+            scrollEnd="bottom 15%"
             playOnMount
           >
           Soluções Inteligentes em Tecnologia
@@ -125,6 +129,8 @@ export default function Hero() {
             containerClassName="text-base md:text-lg text-gray-200 mb-7"
             animationDuration={0.65}
             stagger={0.02}
+            scrollStart="top 85%"
+            scrollEnd="bottom 15%"
             playOnMount
           >
           Infraestrutura, segurança da informação e suporte especializado para pequenas e médias empresas.
