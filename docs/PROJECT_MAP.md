@@ -95,6 +95,8 @@ As secoes navegaveis atuais sao:
 | --- | --- | --- | --- |
 | `Navbar.jsx` | Header fixo, links e menu mobile | React hooks, `react-icons/fa` | Centraliza a navegacao e o offset do scroll. |
 | `Hero.jsx` | Primeira dobra da pagina | Framer Motion, `react-tsparticles`, imagem `hero-bg.png` | Tem background, overlay, particulas e CTA principal. |
+| `StrokeText.jsx` | Animacao inicial do titulo TRIXON no Hero | GSAP | Usado somente dentro do h1 principal da Hero. |
+| `ScrollFloat.jsx` | Animacao de textos por scroll | GSAP/ScrollTrigger | Usado no subtitulo/descricao do Hero e headings principais das secoes. |
 | `Services.jsx` | Grade de servicos | `react-icons/fa` | Conteudo estatico diretamente no JSX. |
 | `About.jsx` | Bloco institucional | Framer Motion, `about-icon.png` | Texto institucional + imagem. |
 | `Benefits.jsx` | Lista de beneficios | Framer Motion, Heroicons | Usa array local `benefits`, mais simples de manter que JSX repetido. |
@@ -182,6 +184,7 @@ Como o fluxo atual importa imagens a partir de `src/assets/images/`, essas copia
 | `react-scripts` | Scripts do Create React App |
 | `tailwindcss`, `postcss`, `autoprefixer` | Pipeline de estilos |
 | `framer-motion` | Animacoes de entrada e pulso |
+| `gsap` | StrokeText no Hero e ScrollFloat orientado por scroll |
 | `react-tsparticles`, `tsparticles-slim` | Particulas do Hero |
 | `swiper` | Carrossel de depoimentos |
 | `react-icons`, `@heroicons/react` | Icones |

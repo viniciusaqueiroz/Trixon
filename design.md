@@ -167,6 +167,7 @@ Usar escala de 4/8px. Qualquer mudanca na altura do Navbar exige revisar o offse
 - Fundo src/assets/images/hero-bg.png com cover e center.
 - Camadas: imagem, gradiente radial animado, particulas, overlay escuro e conteudo.
 - Texto branco e proposta de valor curta.
+- Titulo principal TRIXON usa Orbitron, text-5xl no mobile, text-7xl no desktop, font-extrabold, letter-spacing 0 e StrokeText apenas como animacao inicial de contorno/preenchimento.
 - CTA principal aponta para #cta.
 - Indicador inferior aponta para #servicos.
 - Nao aumentar efeitos sem verificar legibilidade, reduced motion e performance.
@@ -204,12 +205,21 @@ Usar escala de 4/8px. Qualquer mudanca na altura do Navbar exige revisar o offse
 
 ### ScrollFloat
 
-- Aplicado aos textos de destaque do Hero e aos headings principais de Services, About, Benefits, Testimonials, CTA e ContactForm para introduzir movimento durante a navegacao vertical.
+- Aplicado ao subtitulo e descricao do Hero e aos headings principais de Services, About, Benefits, Testimonials, CTA e ContactForm para introduzir movimento durante a navegacao vertical.
 - Nao aplicar em Navbar, menus, botoes, formularios, paragrafo, Footer ou titulos internos de cards.
 - Deve preservar a tipografia, cor, alinhamento, tamanho e espacamento do heading hospedeiro.
 - Parametros atuais: animationDuration 1, ease back.inOut(2), scrollStart center bottom+=50%, scrollEnd bottom bottom-=40% e stagger 0.03.
 - Usa GSAP/ScrollTrigger com scrub suavizado de 3s e cleanup no desmontar do componente, para manter a progressao perceptivel em scrolls rapidos. No Hero, playOnMount inicia uma entrada curta de 0.65s com stagger 0.02; a janela top 85% -> bottom 15% e toggleActions fazem cada texto reverter ao sair e executar novamente ao retornar.
 - Com reduced motion, as letras devem permanecer imediatamente visiveis e estaticas.
+
+### StrokeText
+
+- Aplicado exclusivamente ao texto principal TRIXON da secao Hero.
+- Deve permanecer dentro do h1 principal para preservar semantica, SEO e hierarquia de headings.
+- Usa currentColor para stroke e fill, herdando o branco do Hero, e font-family inherit para preservar Orbitron.
+- Usa fontSize 1em para herdar a escala responsiva text-5xl/md:text-7xl do h1 hospedeiro.
+- Parametros atuais: strokeWidth 1.4, drawDuration 1.6, fillDelay 0.2, stagger 0.05, ease power2.out, trigger mount e fillMode wipe.
+- Com reduced motion, o texto deve ficar imediatamente visivel no estado final.
 
 ### CTA
 

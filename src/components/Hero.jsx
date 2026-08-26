@@ -4,6 +4,7 @@ import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';
 import heroBg from '../assets/images/hero-bg.png';
 import ScrollFloat from './ScrollFloat';
+import StrokeText from './StrokeText';
 
 export default function Hero() {
   const particlesInit = async (main) => {
@@ -88,17 +89,23 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <ScrollFloat
-            as="h1"
-            containerClassName="text-5xl md:text-7xl font-orbitron font-extrabold mb-3"
-            animationDuration={0.65}
-            stagger={0.02}
-            scrollStart="top 85%"
-            scrollEnd="bottom 15%"
-            playOnMount
-          >
-            TRIXON
-          </ScrollFloat>
+          <h1 className="text-5xl md:text-7xl font-orbitron font-extrabold mb-3">
+            <StrokeText
+              text="TRIXON"
+              strokeColor="currentColor"
+              fillColor="currentColor"
+              strokeWidth={1.4}
+              drawDuration={1.6}
+              fillDelay={0.2}
+              stagger={0.05}
+              ease="power2.out"
+              trigger="mount"
+              fillMode="wipe"
+              fontSize="1em"
+              fontWeight={800}
+              letterSpacing={0}
+            />
+          </h1>
         </motion.div>
 
         <motion.div
