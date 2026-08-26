@@ -26,7 +26,7 @@ export default function Navbar() {
   const handleScroll = (e, href) => {
     e.preventDefault();
 
-    if (href === '#') {
+    if (href === '#' || href === '#top') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setMenuOpen(false);
       return;

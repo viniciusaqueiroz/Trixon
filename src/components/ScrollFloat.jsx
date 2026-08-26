@@ -14,6 +14,7 @@ const ScrollFloat = ({
   scrollStart = 'center bottom+=50%',
   scrollEnd = 'bottom bottom-=40%',
   stagger = 0.03,
+  scrub = 1.2,
   as: HeadingTag = 'h2',
 }) => {
   const containerRef = useRef(null);
@@ -81,14 +82,14 @@ const ScrollFloat = ({
             scroller,
             start: scrollStart,
             end: scrollEnd,
-            scrub: true,
+            scrub,
           },
         }
       );
     }, element);
 
     return () => context.revert();
-  }, [scrollContainerRef, animationDuration, ease, scrollStart, scrollEnd, stagger]);
+  }, [scrollContainerRef, animationDuration, ease, scrollStart, scrollEnd, stagger, scrub]);
 
   return (
     <HeadingTag ref={containerRef} className={`scroll-float ${containerClassName}`}>

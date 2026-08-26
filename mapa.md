@@ -162,7 +162,7 @@ Header.jsx e ParticlesBackground.jsx parecem legados e nao sao usados por App.js
 - O formulario valida no cliente, escreve no console e exibe sucesso local.
 - O formulario nao envia para backend, email, CRM ou API.
 - WhatsApp e o unico destino externo de conversao.
-- ScrollFloat usa GSAP/ScrollTrigger para animar headings principais de Services, About, Benefits, Testimonials, CTA e ContactForm durante o scroll.
+- ScrollFloat usa GSAP/ScrollTrigger para animar headings principais de Services, About, Benefits, Testimonials, CTA e ContactForm durante o scroll, com scrub suavizado de 1.2s.
 
 ## 9. Design e responsividade
 
