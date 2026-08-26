@@ -1,3 +1,5 @@
+import ScrollFloat from './ScrollFloat';
+
 export default function CTA() {
   return (
     <section
@@ -19,9 +21,11 @@ export default function CTA() {
             />
           </svg>
 
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <ScrollFloat
+            containerClassName="text-3xl md:text-4xl font-bold"
+          >
             Vamos acelerar a transformação digital da sua empresa?
-          </h2>
+          </ScrollFloat>
           <p className="text-lg text-blue-100 max-w-2xl">
             Chega de soluções improvisadas. Tenha uma infraestrutura segura, escalável e com suporte de verdade.
           </p>

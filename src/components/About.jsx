@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import aboutIcon from '../assets/images/about-icon.png';
+import ScrollFloat from './ScrollFloat';
 
 export default function About() {
   return (
@@ -15,9 +16,11 @@ export default function About() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <ScrollFloat
+            containerClassName="text-3xl md:text-4xl font-bold text-primary mb-4"
+          >
             Sobre a <span className="font-orbitron">Trixon</span>
-          </h2>
+          </ScrollFloat>
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
             A <span className="font-orbitron">Trixon</span> nasceu com a missão de levar tecnologia profissional, segura e acessível para empresas que precisam de soluções confiáveis sem burocracia.
           </p>

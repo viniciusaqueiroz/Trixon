@@ -61,7 +61,8 @@ export default function Navbar() {
   ];
 
   return (
-    <header 
+    <header
+      id="top"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 
       ${isScrolled 
         ? 'bg-white/70 backdrop-blur-md shadow-md py-2' // Ao rolar: Transparência + Desfoque
@@ -71,9 +72,9 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
         
         {/* LOGO */}
-        <a 
-          href="#" 
-          onClick={(e) => handleScroll(e, '#')}
+        <a
+          href="#top"
+          onClick={(e) => handleScroll(e, '#top')}
           className="cursor-pointer transition-opacity duration-500 ease-out hover:opacity-80"
         >
           <h1 className="text-2xl md:text-4xl font-orbitron font-extrabold tracking-tight 
@@ -105,14 +106,21 @@ export default function Navbar() {
         </nav>
 
         {/* Botão hambúrguer mobile */}
-        <button onClick={toggleMenu} className="md:hidden text-primary focus:outline-none">
+        <button
+          type="button"
+          onClick={toggleMenu}
+          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          className="md:hidden text-primary focus:outline-none"
+        >
           {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
 
       {/* Menu mobile */}
       {menuOpen && (
-        <nav className="md:hidden bg-white border-t border-gray-200 px-4 py-4 space-y-4 animate-fade-in-down">
+        <nav id="mobile-menu" className="md:hidden bg-white border-t border-gray-200 px-4 py-4 space-y-4 animate-fade-in-down">
           {links.map((link) => (
             <a
               key={link.label}

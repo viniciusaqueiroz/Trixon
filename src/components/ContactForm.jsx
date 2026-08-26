@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheckIcon } from '@heroicons/react/24/solid';
+import ScrollFloat from './ScrollFloat';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -40,9 +41,12 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
           className="bg-white p-8 rounded-xl shadow-lg space-y-5"
         >
-          <h3 className="text-2xl font-bold text-primary mb-4">
+          <ScrollFloat
+            as="h3"
+            containerClassName="text-2xl font-bold text-primary mb-4"
+          >
             Entre em contato com a <span className="font-orbitron">Trixon</span>
-          </h3>
+          </ScrollFloat>
           <p className="text-gray-700 mb-6">
             Estamos prontos para entender as necessidades da sua empresa e criar soluções de TI sob medida.
             Preencha o formulário e fale diretamente com um especialista.

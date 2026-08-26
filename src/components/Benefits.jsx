@@ -5,6 +5,7 @@ import {
   ShieldCheckIcon,
   UserGroupIcon,
 } from '@heroicons/react/24/outline';
+import ScrollFloat from './ScrollFloat';
 
 const benefits = [
   {
@@ -31,9 +32,11 @@ export default function Benefits() {
       className="relative z-0 py-20 bg-gradient-to-r from-gray-100 via-blue-50 to-gray-50"
     >
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+        <ScrollFloat
+          containerClassName="text-3xl md:text-4xl font-bold text-primary text-center mb-12"
+        >
           Benefícios para sua empresa
-        </h2>
+        </ScrollFloat>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => {

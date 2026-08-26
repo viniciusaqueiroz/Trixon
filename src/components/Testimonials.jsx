@@ -4,6 +4,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { StarIcon } from '@heroicons/react/24/solid';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import ScrollFloat from './ScrollFloat';
 
 const testimonials = [
   {
@@ -50,7 +51,12 @@ export default function Testimonials() {
       id="depoimentos"
       className="py-20 bg-gradient-to-r from-gray-100 via-blue-50 to-gray-50 px-4"
     >
-      <h3 className="text-3xl font-heading font-bold text-primary text-center mb-12">Depoimentos</h3>
+      <ScrollFloat
+        as="h3"
+        containerClassName="text-3xl font-heading font-bold text-primary text-center mb-12"
+      >
+        Depoimentos
+      </ScrollFloat>
 
       <Swiper
         modules={[Autoplay, Pagination]}

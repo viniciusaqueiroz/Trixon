@@ -1,27 +1,21 @@
-
 {
   "name": "consultor-ti-landing",
   "version": "0.1.0",
   "private": true,
-   "homepage": "https://viniciusaqueiroz.github.io/Trixon",
+  "homepage": "https://viniciusaqueiroz.github.io/Trixon",
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "framer-motion": "^12.23.24",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-icons": "^5.5.0",
-    "react-scripts": "5.0.1",
+    "framer-motion": "^12.43.0",
+    "gsap": "^3.15.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-icons": "^5.7.0",
     "react-tsparticles": "^2.12.2",
-    "swiper": "^12.0.3",
+    "swiper": "^12.2.0",
     "tsparticles": "^3.9.1",
     "tsparticles-slim": "^2.12.0",
     "web-vitals": "^2.1.4"
   },
-  
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -49,9 +43,15 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.5.4",
     "gh-pages": "^6.3.0",
-    "postcss": "^8.4.24",
-    "tailwindcss": "^3.3.2"
+    "postcss": "^8.5.26",
+    "postcss-nesting": "^14.0.1",
+    "react-scripts": "^5.0.1",
+    "tailwindcss": "^3.4.19"
   }
 }
