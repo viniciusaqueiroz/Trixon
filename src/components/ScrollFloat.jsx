@@ -80,6 +80,18 @@ const ScrollFloat = ({
 
       if (playOnMount) {
         gsap.fromTo(characters, fromVars, toVars);
+
+        gsap.fromTo(characters, fromVars, {
+          ...toVars,
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: element,
+            scroller,
+            start: scrollStart,
+            end: scrollEnd,
+            toggleActions: 'play reverse play reverse',
+          },
+        });
         return;
       }
 

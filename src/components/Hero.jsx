@@ -91,6 +91,8 @@ export default function Hero() {
           <ScrollFloat
             as="h1"
             containerClassName="text-5xl md:text-7xl font-orbitron font-extrabold mb-3"
+            animationDuration={0.65}
+            stagger={0.02}
             playOnMount
           >
             TRIXON
@@ -105,6 +107,8 @@ export default function Hero() {
           <ScrollFloat
             as="h2"
             containerClassName="text-xl md:text-2xl font-body font-medium text-gray-100 mb-4"
+            animationDuration={0.65}
+            stagger={0.02}
             playOnMount
           >
           Soluções Inteligentes em Tecnologia
@@ -119,6 +123,8 @@ export default function Hero() {
           <ScrollFloat
             as="p"
             containerClassName="text-base md:text-lg text-gray-200 mb-7"
+            animationDuration={0.65}
+            stagger={0.02}
             playOnMount
           >
           Infraestrutura, segurança da informação e suporte especializado para pequenas e médias empresas.
