@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';
 import heroBg from '../assets/images/hero-bg.png';
+import ScrollFloat from './ScrollFloat';
 
 export default function Hero() {
   const particlesInit = async (main) => {
@@ -82,32 +83,44 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/50 to-black/35 z-0"></div>
 
       <div className="relative z-10 max-w-3xl">
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="text-5xl md:text-7xl font-orbitron font-extrabold mb-3"
         >
-          TRIXON
-        </motion.h1>
+          <ScrollFloat
+            as="h1"
+            containerClassName="text-5xl md:text-7xl font-orbitron font-extrabold mb-3"
+          >
+            TRIXON
+          </ScrollFloat>
+        </motion.div>
 
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl md:text-2xl font-body font-medium text-gray-100 mb-4"
         >
+          <ScrollFloat
+            as="h2"
+            containerClassName="text-xl md:text-2xl font-body font-medium text-gray-100 mb-4"
+          >
           Soluções Inteligentes em Tecnologia
-        </motion.h2>
+          </ScrollFloat>
+        </motion.div>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-base md:text-lg text-gray-200 mb-7"
         >
+          <ScrollFloat
+            as="p"
+            containerClassName="text-base md:text-lg text-gray-200 mb-7"
+          >
           Infraestrutura, segurança da informação e suporte especializado para pequenas e médias empresas.
-        </motion.p>
+          </ScrollFloat>
+        </motion.div>
 
         <motion.a
           href="#cta"

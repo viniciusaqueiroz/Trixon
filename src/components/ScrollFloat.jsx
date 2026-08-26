@@ -14,7 +14,7 @@ const ScrollFloat = ({
   scrollStart = 'center bottom+=50%',
   scrollEnd = 'bottom bottom-=40%',
   stagger = 0.03,
-  scrub = 2.4,
+  scrub = 3,
   as: HeadingTag = 'h2',
 }) => {
   const containerRef = useRef(null);

@@ -204,11 +204,11 @@ Usar escala de 4/8px. Qualquer mudanca na altura do Navbar exige revisar o offse
 
 ### ScrollFloat
 
-- Aplicado aos headings principais de Services, About, Benefits, Testimonials, CTA e ContactForm para introduzir movimento durante a navegacao vertical.
+- Aplicado aos textos de destaque do Hero e aos headings principais de Services, About, Benefits, Testimonials, CTA e ContactForm para introduzir movimento durante a navegacao vertical.
 - Nao aplicar em Navbar, menus, botoes, formularios, paragrafo, Footer ou titulos internos de cards.
 - Deve preservar a tipografia, cor, alinhamento, tamanho e espacamento do heading hospedeiro.
 - Parametros atuais: animationDuration 1, ease back.inOut(2), scrollStart center bottom+=50%, scrollEnd bottom bottom-=40% e stagger 0.03.
-- Usa GSAP/ScrollTrigger com scrub suavizado de 2.4s e cleanup no desmontar do componente, para manter a progressao perceptivel em scrolls rapidos.
+- Usa GSAP/ScrollTrigger com scrub suavizado de 3s e cleanup no desmontar do componente, para manter a progressao perceptivel em scrolls rapidos.
 - Com reduced motion, as letras devem permanecer imediatamente visiveis e estaticas.
 
 ### CTA
