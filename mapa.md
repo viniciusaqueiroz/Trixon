@@ -9,8 +9,8 @@
 - Tipo: landing page institucional B2B para tecnologia e consultoria de TI
 - Repositorio: https://github.com/viniciusaqueiroz/Trixon
 - Branch principal: main
-- Hospedagem atual configurada: GitHub Pages
-- Hospedagem futura: Vercel
+- Hospedagem atual: Vercel em https://trixonjf.vercel.app/
+- GitHub Pages: fluxo legado mantido apenas pelo script gh-pages
 - Caminho local: C:\Users\supor\Desktop\meu-portfolio\Trixon
 - Backend, banco e API de formulario: inexistentes
 - Aplicacao: pagina unica, estatica no frontend
@@ -73,8 +73,9 @@ Antes de executar qualquer comando ou editar qualquer arquivo:
 
 ### Publicacao
 - gh-pages permanece para o fluxo antigo
-- homepage atual: https://viniciusaqueiroz.github.io/Trixon
-- Vercel ainda nao configurada
+- homepage: removido para que o CRA gere assets na raiz, compativel com Vercel
+- Projeto Vercel: https://vercel.com/vinieprojects/trixonjf
+- Build Vercel esperado: npm run build, com saida build/
 - Saida de build: build/
 
 ## 5. Fluxo da aplicacao
@@ -227,9 +228,9 @@ Usar npm ci para reproduzir package-lock. Nao aplicar npm audit fix --force auto
 
 URL atual:
 
-    http://localhost:3000/Trixon
+    http://localhost:3000
 
-O sufixo /Trixon vem do homepage atual do GitHub Pages.
+O projeto usa a raiz no desenvolvimento e na Vercel. O sufixo /Trixon pertence apenas ao fluxo antigo do GitHub Pages.
 
 ### Validacao
 
@@ -299,7 +300,7 @@ Nao executar deploy ou push sem solicitacao explicita.
 Antes da migracao:
 
 - Decidir se CRA sera mantido ou substituido.
-- Revisar homepage, pois /Trixon e especifico do GitHub Pages.
+- Manter homepage removido para que os assets sejam resolvidos a partir da raiz na Vercel.
 - Confirmar build npm run build e output build/.
 - Definir dominio, redirects, headers e variaveis de ambiente.
 - Integrar o formulario a endpoint seguro.
