@@ -15,6 +15,7 @@ const ScrollFloat = ({
   scrollEnd = 'bottom bottom-=40%',
   stagger = 0.03,
   scrub = 3,
+  playOnMount = false,
   as: HeadingTag = 'h2',
 }) => {
   const containerRef = useRef(null);
@@ -59,37 +60,43 @@ const ScrollFloat = ({
         : window;
 
     const context = gsap.context(() => {
-      gsap.fromTo(
-        characters,
-        {
-          willChange: 'opacity, transform',
-          opacity: 0,
-          yPercent: 120,
-          scaleY: 2.3,
-          scaleX: 0.7,
-          transformOrigin: '50% 0%',
+      const fromVars = {
+        willChange: 'opacity, transform',
+        opacity: 0,
+        yPercent: 120,
+        scaleY: 2.3,
+        scaleX: 0.7,
+        transformOrigin: '50% 0%',
+      };
+      const toVars = {
+        duration: animationDuration,
+        ease,
+        opacity: 1,
+        yPercent: 0,
+        scaleY: 1,
+        scaleX: 1,
+        stagger,
+      };
+
+      if (playOnMount) {
+        gsap.fromTo(characters, fromVars, toVars);
+        return;
+      }
+
+      gsap.fromTo(characters, fromVars, {
+        ...toVars,
+        scrollTrigger: {
+          trigger: element,
+          scroller,
+          start: scrollStart,
+          end: scrollEnd,
+          scrub,
         },
-        {
-          duration: animationDuration,
-          ease,
-          opacity: 1,
-          yPercent: 0,
-          scaleY: 1,
-          scaleX: 1,
-          stagger,
-          scrollTrigger: {
-            trigger: element,
-            scroller,
-            start: scrollStart,
-            end: scrollEnd,
-            scrub,
-          },
-        }
-      );
+      });
     }, element);
 
     return () => context.revert();
-  }, [scrollContainerRef, animationDuration, ease, scrollStart, scrollEnd, stagger, scrub]);
+  }, [scrollContainerRef, animationDuration, ease, scrollStart, scrollEnd, stagger, scrub, playOnMount]);
 
   return (
     <HeadingTag ref={containerRef} className={`scroll-float ${containerClassName}`}>
