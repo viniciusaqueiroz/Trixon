@@ -97,7 +97,7 @@ As secoes navegaveis atuais sao:
 | `Hero.jsx` | Primeira dobra da pagina | Framer Motion, `react-tsparticles`, imagem `hero-bg.png` | Tem background, overlay, particulas e CTA principal. |
 | `StrokeText.jsx` | Animacao inicial do titulo TRIXON no Hero | GSAP | Usado somente dentro do h1 principal da Hero. |
 | `ScrollFloat.jsx` | Animacao de textos por scroll | GSAP/ScrollTrigger | Usado no subtitulo/descricao do Hero e headings principais das secoes. |
-| `Services.jsx` | Grade de servicos com parallax | `react-icons/fa`, GSAP/ScrollTrigger | Quatro servicos em colunas com movimento sutil orientado por scroll e fallback para reduced motion. |
+| `Services.jsx` | Grade de servicos com parallax | `react-icons/fa`, GSAP/ScrollTrigger | Quatro cards em grid responsivo com movimento sutil orientado por scroll e fallback para reduced motion. |
 | `About.jsx` | Bloco institucional | Framer Motion, `about-icon.png` | Texto institucional + imagem. |
 | `Benefits.jsx` | Lista de beneficios | Framer Motion, Heroicons | Usa array local `benefits`, mais simples de manter que JSX repetido. |
 | `Testimonials.jsx` | Carrossel de depoimentos | Swiper, Framer Motion, Heroicons | Usa array local `testimonials`; autoplay e breakpoints ficam aqui. |

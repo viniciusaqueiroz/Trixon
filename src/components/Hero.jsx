@@ -40,39 +40,39 @@ export default function Hero() {
           detectRetina: true,
           particles: {
             number: {
-              value: 100,
+              value: 45,
               density: { enable: true, area: 900 },
             },
             color: { value: '#ffffff' },
             shape: { type: 'circle' },
             opacity: {
-              value: { min: 0.22, max: 0.65 },
+              value: { min: 0.12, max: 0.32 },
               animation: {
                 enable: true,
-                speed: 1.2,
-                minimumValue: 0.18,
+                speed: 0.5,
+                minimumValue: 0.1,
                 sync: false,
               },
             },
             size: {
-              value: { min: 1, max: 3.2 },
+              value: { min: 0.6, max: 1.8 },
               animation: {
                 enable: true,
-                speed: 1.5,
+                speed: 0.5,
                 minimumValue: 0.8,
                 sync: false,
               },
             },
             links: {
               enable: true,
-              distance: 155,
+              distance: 120,
               color: '#93c5fd',
-              opacity: 0.24,
+              opacity: 0.1,
               width: 1,
             },
             move: {
               enable: true,
-              speed: 2.2,
+              speed: 0.65,
               direction: 'none',
               outModes: { default: 'bounce' },
             },

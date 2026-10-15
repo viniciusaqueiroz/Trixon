@@ -153,9 +153,9 @@ Usar escala de 4/8px. Qualquer mudanca na altura do Navbar exige revisar o offse
 
 ### Navbar
 
-- Header fixo, largura total, branco no topo.
-- Depois de 20px de scroll: bg-white/70, blur e sombra.
-- Logo TRIXON em Orbitron, gradiente azul/roxo e gradiente animado.
+- Header fixo, largura total, azul-escuro slate-950 no topo, com links claros.
+- Depois de 20px de scroll: bg-slate-950/75, blur e sombra; menu mobile escuro.
+- Logo TRIXON em Orbitron, gradiente animado azul-claro, perolado e lavanda com brilho discreto sobre o fundo escuro; estatico com reduced motion.
 - Menu desktop a partir de md.
 - Menu mobile controlado por botao com aria-label, aria-expanded e aria-controls.
 - Links sao ancoras internas com scroll suave e compensacao do header.
@@ -175,8 +175,9 @@ Usar escala de 4/8px. Qualquer mudanca na altura do Navbar exige revisar o offse
 ### Services
 
 - Fundo branco.
-- Quatro cards azuis em composição de colunas com parallax sutil inspirado no padrão de scrolling do Osmo.
-- O parallax deve usar apenas transform, respeitar `prefers-reduced-motion` e manter os cards legíveis em mobile.
+- Quatro cards azuis em grid responsivo de 1/2/4 colunas com parallax sutil inspirado no padrão de scrolling do Osmo.
+- O parallax deve usar apenas transform, respeitar `prefers-reduced-motion` e preservar o alinhamento do grid em mobile e desktop.
+- Animar o grid inteiro entre 24px e -24px, mantendo os cards alinhados em cada linha.
 - Icones react-icons/fa centralizados, aproximadamente 40px.
 - Cards com raio medio, sombra e elevacao discreta no hover.
 - Titulo curto e descricao objetiva por servico.
@@ -206,11 +207,11 @@ Usar escala de 4/8px. Qualquer mudanca na altura do Navbar exige revisar o offse
 
 ### ScrollFloat
 
-- Aplicado ao subtitulo e descricao do Hero e aos headings principais de Services, About, Benefits, Testimonials, CTA e ContactForm para introduzir movimento durante a navegacao vertical.
+- Aplicado ao subtitulo e descricao do Hero e aos headings principais de About, Benefits, Testimonials, CTA e ContactForm para introduzir movimento durante a navegacao vertical. Services mantém um `h2` estável e aplica o parallax diretamente nos cards.
 - Nao aplicar em Navbar, menus, botoes, formularios, paragrafo, Footer ou titulos internos de cards.
 - Deve preservar a tipografia, cor, alinhamento, tamanho e espacamento do heading hospedeiro.
-- Parametros atuais: animationDuration 1, ease back.inOut(2), scrollStart center bottom+=50%, scrollEnd bottom bottom-=40% e stagger 0.03.
-- Usa GSAP/ScrollTrigger com scrub suavizado de 3s e cleanup no desmontar do componente, para manter a progressao perceptivel em scrolls rapidos. No Hero, playOnMount inicia uma entrada curta de 0.65s com stagger 0.02; a janela top 85% -> bottom 15% e toggleActions fazem cada texto reverter ao sair e executar novamente ao retornar.
+- Entrada suave de 0.5 a 0.8s, deslocamento vertical de 25%, sem deformacao das letras e stagger total limitado a 0.2s.
+- GSAP/ScrollTrigger dispara uma unica vez em top 90%, sem scrub nem reversao. No Hero, playOnMount executa somente na entrada inicial. Os textos permanecem visiveis ao retornar; recarregar a pagina reinicia as entradas.
 - Com reduced motion, as letras devem permanecer imediatamente visiveis e estaticas.
 
 ### StrokeText
@@ -225,6 +226,7 @@ Usar escala de 4/8px. Qualquer mudanca na altura do Navbar exige revisar o offse
 ### CTA
 
 - Fundo em gradiente azul escuro e texto branco.
+- Parallax do conteudo inteiro entre 24px e -24px, scrub 1.2, igual a Services; manter py-20 como margem para o movimento, sem pin, sticky ou deslocamentos individuais. Reduced motion desativa o efeito.
 - Acao primaria: #contato em botao branco.
 - Acao secundaria: WhatsApp em verde.
 - Botao flutuante de WhatsApp permanece fixo no canto inferior direito, com alvo minimo de 44px, safe area, foco visivel e suporte a reduced motion.
@@ -244,6 +246,7 @@ Usar escala de 4/8px. Qualquer mudanca na altura do Navbar exige revisar o offse
 ### Footer
 
 - Fundo gray-800 com texto branco.
+- Redes sociais: LinkedIn, Instagram, Facebook e X em botoes de 48px, bordas suaves e destaque azul/lavanda com legenda em hover e foco; reduced motion e suporte a touch. Perfis oficiais configurados em FooterSocials.jsx; sem URL, item fica desabilitado.
 - Tres colunas no desktop: contato, links rapidos e creditos.
 - Uma coluna natural no mobile.
 - Ano dinamico.
@@ -257,7 +260,7 @@ Animacoes atuais:
 - Menu mobile: fade-in-down de 500ms.
 - Logo: gradiente em loop de 7s.
 - Gradientes radiais do Hero: loop de 12s.
-- Particulas: movimento continuo.
+- Particulas do Hero: 45 pontos, velocidade 0.65, opacidade 0.12–0.32 e conexoes com opacidade 0.1.
 - Icone de seguranca: pulso em loop de 2s.
 - Hover: translacao vertical aproximada de 1px e sombra.
 

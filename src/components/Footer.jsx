@@ -1,3 +1,5 @@
+import FooterSocials from './FooterSocials';
+
 export default function Footer() {
   return (
     <footer id="footer" className="bg-gray-800 text-white py-10 px-4">
@@ -6,6 +8,7 @@ export default function Footer() {
           <h4 className="font-bold mb-2">Contato</h4>
           <p>Email: contato@trixon.com.br</p>
           <p>Telefone: (32) 98875-7881</p>
+          <FooterSocials />
         </div>
         <div>
           <h4 className="font-bold mb-2">Links rápidos</h4>

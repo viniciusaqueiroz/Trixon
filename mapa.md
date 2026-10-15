@@ -165,7 +165,7 @@ Header.jsx e ParticlesBackground.jsx parecem legados e nao sao usados por App.js
 - O formulario valida no cliente, escreve no console e exibe sucesso local.
 - O formulario nao envia para backend, email, CRM ou API.
 - WhatsApp e o unico destino externo de conversao.
-- ScrollFloat usa GSAP/ScrollTrigger para animar o subtitulo e descricao do Hero e headings principais de Services, About, Benefits, Testimonials, CTA e ContactForm durante o scroll, com scrub suavizado de 3s. No Hero, playOnMount usa entrada curta de 0.65s, stagger 0.02, janela top 85% -> bottom 15% e toggleActions para repetir ao retornar a secao.
+- ScrollFloat anima textos uma unica vez por carregamento, ao entrar em top 90%, sem scrub ou reversao. Entrada de 0.5 a 0.8s, deslocamento de 25% e stagger total de 0.2s. No Hero, playOnMount executa uma unica entrada inicial. Services preserva seu h2 estavel e parallax no grid. Refresh reinicia as entradas.
 - StrokeText usa GSAP para animar somente o titulo principal TRIXON do Hero no mount, preservando h1, Orbitron, text-5xl/md:text-7xl, font-extrabold, letter-spacing 0 e cor herdada do texto branco.
 
 ## 9. Design e responsividade

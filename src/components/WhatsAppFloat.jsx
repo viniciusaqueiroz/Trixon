@@ -7,7 +7,7 @@ const whatsappUrl =
 export default function WhatsAppFloat() {
   return (
     <a
-      className="whatsapp-float group"
+      className="whatsapp-float"
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
@@ -16,7 +16,6 @@ export default function WhatsAppFloat() {
       <span className="whatsapp-float__pulse" aria-hidden="true" />
       <span className="whatsapp-float__content">
         <FaWhatsapp aria-hidden="true" className="text-2xl" />
-        <span className="whatsapp-float__label">Fale conosco</span>
       </span>
     </a>
   );

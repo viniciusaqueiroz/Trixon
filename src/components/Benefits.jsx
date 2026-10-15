@@ -44,9 +44,9 @@ export default function Benefits() {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.08, ease: 'easeOut' }}
                 viewport={{ once: true }}
                 className="bg-white p-6 rounded-xl shadow-md text-center transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-xl"
               >

@@ -18,7 +18,8 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', checkScroll);
+    checkScroll();
+    window.addEventListener('scroll', checkScroll, { passive: true });
     return () => window.removeEventListener('scroll', checkScroll);
   }, []);
 
@@ -65,8 +66,8 @@ export default function Navbar() {
       id="top"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 
       ${isScrolled 
-        ? 'bg-white/70 backdrop-blur-md shadow-md py-2' // Ao rolar: Transparência + Desfoque
-        : 'bg-white py-4' // No topo: Branco Sólido
+        ? 'bg-slate-950/75 backdrop-blur-xl shadow-lg border-b border-white/10 py-2'
+        : 'bg-slate-950 border-b border-white/5 py-4'
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
@@ -77,9 +78,7 @@ export default function Navbar() {
           onClick={(e) => handleScroll(e, '#top')}
           className="cursor-pointer transition-opacity duration-500 ease-out hover:opacity-80"
         >
-          <h1 className="text-2xl md:text-4xl font-orbitron font-extrabold tracking-tight 
-                         bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 
-                         bg-clip-text text-transparent animate-gradient">
+          <h1 className="navbar-brand text-2xl md:text-4xl font-orbitron font-extrabold tracking-tight">
             TRIXON
           </h1>
         </a>
@@ -91,7 +90,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
-              className="text-gray-700 font-medium transition-colors duration-500 ease-out hover:text-primary"
+              className="text-slate-200 font-medium transition-colors duration-300 ease-out hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300"
             >
               {link.label}
             </a>
@@ -112,7 +111,7 @@ export default function Navbar() {
           aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
-          className="md:hidden text-primary focus:outline-none"
+          className="md:hidden flex h-11 w-11 items-center justify-center rounded text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300"
         >
           {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
@@ -120,13 +119,13 @@ export default function Navbar() {
 
       {/* Menu mobile */}
       {menuOpen && (
-        <nav id="mobile-menu" className="md:hidden bg-white border-t border-gray-200 px-4 py-4 space-y-4 animate-fade-in-down">
+        <nav id="mobile-menu" className="md:hidden bg-slate-950/95 border-t border-white/10 px-4 py-4 space-y-4 animate-fade-in-down">
           {links.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
-              className="block text-gray-700 font-medium transition-colors duration-500 ease-out hover:text-primary"
+              className="block py-2 text-slate-200 font-medium transition-colors duration-300 ease-out hover:text-white"
             >
               {link.label}
             </a>

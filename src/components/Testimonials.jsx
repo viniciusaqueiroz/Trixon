@@ -76,7 +76,7 @@ export default function Testimonials() {
         {testimonials.map((t, i) => (
           <SwiperSlide key={i}>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}

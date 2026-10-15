@@ -9,12 +9,9 @@ const ScrollFloat = ({
   scrollContainerRef,
   containerClassName = '',
   textClassName = '',
-  animationDuration = 1,
-  ease = 'back.inOut(2)',
-  scrollStart = 'center bottom+=50%',
-  scrollEnd = 'bottom bottom-=40%',
-  stagger = 0.03,
-  scrub = 3,
+  animationDuration = 0.65,
+  ease = 'power2.out',
+  stagger = 0.012,
   playOnMount = false,
   as: HeadingTag = 'h2',
 }) => {
@@ -63,35 +60,23 @@ const ScrollFloat = ({
       const fromVars = {
         willChange: 'opacity, transform',
         opacity: 0,
-        yPercent: 120,
-        scaleY: 2.3,
-        scaleX: 0.7,
+        yPercent: 25,
         transformOrigin: '50% 0%',
       };
       const toVars = {
-        duration: animationDuration,
+        duration: Math.min(Math.max(animationDuration, 0.5), 0.8),
         ease,
         opacity: 1,
         yPercent: 0,
         scaleY: 1,
         scaleX: 1,
-        stagger,
+        stagger: { each: Math.min(stagger, 0.015), amount: 0.2 },
+        onComplete: () => gsap.set(characters, { clearProps: 'willChange,transform' }),
       };
 
       if (playOnMount) {
         gsap.fromTo(characters, fromVars, toVars);
 
-        gsap.fromTo(characters, fromVars, {
-          ...toVars,
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: element,
-            scroller,
-            start: scrollStart,
-            end: scrollEnd,
-            toggleActions: 'play reverse play reverse',
-          },
-        });
         return;
       }
 
@@ -100,19 +85,19 @@ const ScrollFloat = ({
         scrollTrigger: {
           trigger: element,
           scroller,
-          start: scrollStart,
-          end: scrollEnd,
-          scrub,
+          start: 'top 90%',
+          once: true,
+          toggleActions: 'play none none none',
         },
       });
     }, element);
 
     return () => context.revert();
-  }, [scrollContainerRef, animationDuration, ease, scrollStart, scrollEnd, stagger, scrub, playOnMount]);
+  }, [scrollContainerRef, animationDuration, ease, stagger, playOnMount]);
 
   return (
     <HeadingTag ref={containerRef} className={`scroll-float ${containerClassName}`}>
-      <span className={`scroll-float-text ${textClassName}`}>{splitText}</span>
+      <span className={`scroll-float-text ${textClassName}`}>{typeof children === 'string' ? splitText : children}</span>
     </HeadingTag>
   );
 };

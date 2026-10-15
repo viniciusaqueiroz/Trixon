@@ -1,12 +1,40 @@
+import { useLayoutEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import ScrollFloat from './ScrollFloat';
 
 export default function CTA() {
+  const sectionRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const media = gsap.matchMedia();
+
+    media.add('(prefers-reduced-motion: no-preference)', () => {
+      gsap.fromTo(contentRef.current, { y: 24 }, {
+        y: -24,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1.2,
+          invalidateOnRefresh: true,
+        },
+      });
+    });
+
+    return () => media.revert();
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       id="cta"
       className="relative z-0 py-20 bg-gradient-to-r from-blue-800 via-blue-900 to-blue-900 text-white text-center"
     >
-      <div className="max-w-4xl mx-auto px-6">
+      <div ref={contentRef} className="max-w-4xl mx-auto px-6">
         <div className="flex flex-col items-center gap-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"

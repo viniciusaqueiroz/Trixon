@@ -34,25 +34,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
-  padding: 0 1.1rem;
-}
-
-.whatsapp-float__label {
-  max-width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  opacity: 0;
-  transition: max-width 250ms ease, opacity 200ms ease;
-}
-
-.whatsapp-float:hover .whatsapp-float__label,
-.whatsapp-float:focus-visible .whatsapp-float__label {
-  max-width: 7rem;
-  opacity: 1;
 }
 
 .whatsapp-float__pulse {
@@ -86,8 +67,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .whatsapp-float,
-  .whatsapp-float__label {
+  .whatsapp-float {
     transition: none;
   }
 
