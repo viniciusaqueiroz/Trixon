@@ -119,7 +119,7 @@ O Navbar intercepta as ancoras e aplica scroll suave com offset aproximado de 85
     |  |- setupTests.js     Setup do Jest DOM
     |  |- reportWebVitals.js Metricas opcionais
     |  |- assets/images/    Assets importados pelos componentes
-    |  '  - components/      Secoes e controles
+    |  '  - components/      Secoes e controles, incluindo WhatsAppFloat
     |- docs/PROJECT_MAP.md  Mapa tecnico complementar
     |- design.md           Contrato visual e UX
     |- mapa.md             Este mapa operacional
@@ -141,6 +141,7 @@ O Navbar intercepta as ancoras e aplica scroll suave com offset aproximado de 85
 | components/Benefits.jsx | Tres beneficios orientados a resultados |
 | components/Testimonials.jsx | Depoimentos em carrossel |
 | components/CTA.jsx | Chamada comercial e WhatsApp |
+| components/WhatsAppFloat.jsx | CTA fixo e flutuante do WhatsApp |
 | components/ContactForm.jsx | Formulario e painel de seguranca |
 | components/Footer.jsx | Contato, links e creditos |
 | components/ScrollFloat.jsx | Animacao de headings por scroll, com GSAP/ScrollTrigger |

@@ -87,17 +87,17 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.35 }}
         >
-          <h1 className="text-5xl md:text-7xl font-orbitron font-extrabold mb-3">
+          <h1 className="text-6xl md:text-8xl font-orbitron font-extrabold leading-none mb-2">
             <StrokeText
               text="TRIXON"
               strokeColor="currentColor"
               fillColor="currentColor"
               strokeWidth={1.4}
-              drawDuration={1.6}
-              fillDelay={0.2}
-              stagger={0.05}
+              drawDuration={1.05}
+              fillDelay={0.06}
+              stagger={0.03}
               ease="power2.out"
               trigger="mount"
               fillMode="wipe"
@@ -111,13 +111,14 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.35, delay: 0.08 }}
         >
           <ScrollFloat
             as="h2"
             containerClassName="text-xl md:text-2xl font-body font-medium text-gray-100 mb-4"
-            animationDuration={0.65}
-            stagger={0.02}
+            animationDuration={0.35}
+            ease="power2.out"
+            stagger={0.01}
             scrollStart="top 85%"
             scrollEnd="bottom 15%"
             playOnMount
@@ -129,13 +130,14 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.35, delay: 0.14 }}
         >
           <ScrollFloat
             as="p"
             containerClassName="text-base md:text-lg text-gray-200 mb-7"
-            animationDuration={0.65}
-            stagger={0.02}
+            animationDuration={0.35}
+            ease="power2.out"
+            stagger={0.01}
             scrollStart="top 85%"
             scrollEnd="bottom 15%"
             playOnMount
@@ -148,7 +150,7 @@ export default function Hero() {
           href="#cta"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.3, delay: 0.18 }}
           className="bg-primary text-white px-6 py-3 rounded transition-all duration-500 ease-out hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg"
         >
           Falar com a <span className="font-orbitron">Trixon</span>

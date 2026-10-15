@@ -54,7 +54,7 @@ Navbar
 | Caminho | Funcao |
 | --- | --- |
 | `src/index.js` | Ponto de entrada do React. Renderiza `App` dentro de `#root`. |
-| `src/App.js` | Composicao principal da pagina e ordem das secoes. |
+| `src/App.js` | Composicao principal da pagina, ordem das secoes e CTA flutuante global. |
 | `src/components/` | Componentes visuais e secoes da landing page. |
 | `src/assets/images/` | Imagens importadas diretamente pelos componentes React. |
 | `public/images/` | Imagens estaticas acessiveis por URL publica, hoje sem uso aparente no fluxo atual. |
@@ -97,11 +97,12 @@ As secoes navegaveis atuais sao:
 | `Hero.jsx` | Primeira dobra da pagina | Framer Motion, `react-tsparticles`, imagem `hero-bg.png` | Tem background, overlay, particulas e CTA principal. |
 | `StrokeText.jsx` | Animacao inicial do titulo TRIXON no Hero | GSAP | Usado somente dentro do h1 principal da Hero. |
 | `ScrollFloat.jsx` | Animacao de textos por scroll | GSAP/ScrollTrigger | Usado no subtitulo/descricao do Hero e headings principais das secoes. |
-| `Services.jsx` | Grade de servicos | `react-icons/fa` | Conteudo estatico diretamente no JSX. |
+| `Services.jsx` | Grade de servicos com parallax | `react-icons/fa`, GSAP/ScrollTrigger | Quatro servicos em colunas com movimento sutil orientado por scroll e fallback para reduced motion. |
 | `About.jsx` | Bloco institucional | Framer Motion, `about-icon.png` | Texto institucional + imagem. |
 | `Benefits.jsx` | Lista de beneficios | Framer Motion, Heroicons | Usa array local `benefits`, mais simples de manter que JSX repetido. |
 | `Testimonials.jsx` | Carrossel de depoimentos | Swiper, Framer Motion, Heroicons | Usa array local `testimonials`; autoplay e breakpoints ficam aqui. |
 | `CTA.jsx` | Chamada comercial | SVG inline | Contem link direto para WhatsApp. |
+| `WhatsAppFloat.jsx` | CTA flutuante fixo | `react-icons/fa`, CSS local | Mantem o acesso ao WhatsApp durante o scroll, com safe area e reduced motion. |
 | `ContactForm.jsx` | Formulario de contato e painel de confianca | React state, Framer Motion, Heroicons | Hoje valida localmente, apenas registra no console e nao envia dados para backend. |
 | `Footer.jsx` | Rodape institucional | React | Ano dinamico via `new Date().getFullYear()`. |
 | `Header.jsx` | Header alternativo nao utilizado | Nenhuma externa relevante | Parece legado; `App.js` usa `Navbar`, nao `Header`. |

@@ -175,7 +175,8 @@ Usar escala de 4/8px. Qualquer mudanca na altura do Navbar exige revisar o offse
 ### Services
 
 - Fundo branco.
-- Quatro cards azuis usando primary.
+- Quatro cards azuis em composição de colunas com parallax sutil inspirado no padrão de scrolling do Osmo.
+- O parallax deve usar apenas transform, respeitar `prefers-reduced-motion` e manter os cards legíveis em mobile.
 - Icones react-icons/fa centralizados, aproximadamente 40px.
 - Cards com raio medio, sombra e elevacao discreta no hover.
 - Titulo curto e descricao objetiva por servico.
@@ -226,6 +227,7 @@ Usar escala de 4/8px. Qualquer mudanca na altura do Navbar exige revisar o offse
 - Fundo em gradiente azul escuro e texto branco.
 - Acao primaria: #contato em botao branco.
 - Acao secundaria: WhatsApp em verde.
+- Botao flutuante de WhatsApp permanece fixo no canto inferior direito, com alvo minimo de 44px, safe area, foco visivel e suporte a reduced motion.
 - Links externos devem usar target=_blank e rel=noopener noreferrer.
 
 ### ContactForm

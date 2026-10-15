@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import WhatsAppFloat from './components/WhatsAppFloat';
 import './index.css'; 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <CTA />
       <ContactForm />
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 }
